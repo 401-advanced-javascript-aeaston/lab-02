@@ -19,4 +19,16 @@ describe('List Data Structure', () => {
     expect(stuff.data[1]).toEqual('b');
   });
 
+  it('pop works as expected', () => {
+    let stuff = new List();
+    stuff.push('a');
+    stuff.push('b');
+    stuff.push('c');
+    stuff.pop();
+    expect(stuff.length).toEqual(2);
+    expect(stuff.data[1]).toEqual('b');
+    stuff.pop();
+    expect(stuff.length).toEqual(1);
+  });
+
 });
