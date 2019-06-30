@@ -31,4 +31,17 @@ describe('List Data Structure', () => {
     expect(stuff.length).toEqual(1);
   });
 
+  it('removes the first element from position 0 of the array', () => {
+    let stuff = new List();
+    stuff.push('a');
+    stuff.push('b');
+    stuff.push('c');
+    let result = stuff.shift();
+    expect(stuff.length).toEqual(2);
+    expect(stuff.data[1]).toEqual('c');
+    expect(result).toEqual('a');
+    stuff.shift();
+    expect(stuff.length).toEqual(1);
+  });
+
 });

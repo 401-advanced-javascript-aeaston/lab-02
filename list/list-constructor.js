@@ -26,20 +26,19 @@ List.prototype.pop = function() {
 
 // interates through the whole array
 
-List.prototype.forEach = function () {
+List.prototype.forEach = function (callback) {
   for (let i = 0; i < this.length; i++) {
-    console.log(this.data[i]);
+    callback(this.data[i]);
   }
 };
 
 // removes first item from beginning of array
-
 List.prototype.shift = function() {
   let returnValue = this.data[0];
   delete this.data[0];
   this.length--;
   return returnValue;
-}
+};
 
 // adds an element or more to teh beginning of an array
 
