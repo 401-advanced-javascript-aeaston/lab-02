@@ -24,4 +24,16 @@ List.prototype.pop = function() {
   return returnValue;
 };
 
+// interates through the whole array
+
+List.prototype.forEach = function () {
+  for (let i = 0; i < this.length; i++) {
+    return this.data[i];
+  }
+};
+
+
+
+
+
 module.exports = List;
