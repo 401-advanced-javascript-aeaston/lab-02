@@ -28,7 +28,7 @@ List.prototype.pop = function() {
 
 List.prototype.forEach = function () {
   for (let i = 0; i < this.length; i++) {
-    return this.data[i];
+    console.log(this.data[i]);
   }
 };
 
