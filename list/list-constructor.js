@@ -32,7 +32,23 @@ List.prototype.forEach = function () {
   }
 };
 
+// removes first item from beginning of array
 
+List.prototype.shift = function() {
+  let returnValue = this.data[0];
+  delete this.data[0];
+  this.length--;
+  return returnValue;
+}
+
+// adds an element or more to teh beginning of an array
+
+List.prototype.unshift = function(...item) {
+  for (let i = 0; i < item.length; i++) {
+    this.data[0] = item;
+    this.length++;
+  }
+};
 
 
 
