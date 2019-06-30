@@ -3,8 +3,8 @@
 class Vehicle {
 
   constructor(name, wheels) {
-    this.name = name, 
-    this.wheels = wheels
+    this.name = name;
+    this.wheels = wheels;
   }
 
   drive() {

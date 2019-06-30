@@ -32,7 +32,7 @@ class List {
     for (let i = 0; i < this.length; i++) {
       callback(this.data[i]);
     }
-  };
+  }
 
   shift() {
     let returnValue = this.data[0];
@@ -43,7 +43,7 @@ class List {
     delete this.data[this.length - 1];
     this.length--;
     return returnValue;
-  };
+  }
 
   unshift(...arr) {
     for (let i = 0; i < this.length - 1; i++) {
@@ -54,7 +54,7 @@ class List {
       this.length++;
     }
     return this.length;
-  };
+  }
 
 }
 
