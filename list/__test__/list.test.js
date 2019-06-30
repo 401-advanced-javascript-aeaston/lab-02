@@ -44,4 +44,20 @@ describe('List Data Structure', () => {
     expect(stuff.length).toEqual(1);
   });
 
+  // length should be plus 2 if two param
+  // element from position 1 is now at 3
+  // added params should be returned
+
+  it('adds parameters to teh beginning positions of an array', () => {
+    let stuff = new List();
+    stuff.push('a');
+    stuff.push('b');
+    stuff.push('c');
+    let result = stuff.unshift(y, z);
+    expect(stuff.length).toEqual(5);
+    expect(stuff.data[2]).toEqual('a');
+    expect(result).toEqual('y', 'z');
+    stuff.unshift(m);
+    expect(stuff.length).toEqual(6);
+  });
 });
