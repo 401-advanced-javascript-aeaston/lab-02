@@ -33,22 +33,29 @@ List.prototype.forEach = function (callback) {
 };
 
 // removes first item from beginning of array
+
 List.prototype.shift = function() {
   let returnValue = this.data[0];
   delete this.data[0];
+  for (let i = 0; i < this.length - 1; i++) {
+    this.data[i] = this.data[i + 1];
+  }
+  delete this.data[this.length - 1];
   this.length--;
   return returnValue;
 };
 
-// adds an element or more to teh beginning of an array
+// adds an element or more to the beginning of an array
 
-List.prototype.unshift = function(...item) {
-  for (let i = 0; i < item.length; i++) {
-    this.data[0] = item;
+List.prototype.unshift = function(...arr) {
+  for (let i = 0; i < this.length - 1; i++) {
+    this.data[i + arr.length] = this.data[i];
+  }
+  for (let i = 0; i < arr.length; i++) {
+    this.data[i] = arr[i];
     this.length++;
   }
+  return this.length;
 };
-
-
 
 module.exports = List;

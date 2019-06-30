@@ -30,6 +30,21 @@ describe('List Data Structure', () => {
     stuff.pop();
     expect(stuff.length).toEqual(1);
   });
+ 
+  it ('takes in a callback function and runs that function over each element in the array', () => {
+    let stuff = new List();
+    stuff.push(1);
+    stuff.push(2);
+    stuff.push(3);
+    let newArray = [];
+    stuff.forEach(element => {
+      let product = element * 10
+      newArray.push(product);
+    });
+    expect(newArray[0]).toEqual(10);
+    expect(newArray[1]).toEqual(20);
+    expect(newArray[2]).toEqual(30);
+  });
 
   it('removes the first element from position 0 of the array', () => {
     let stuff = new List();
@@ -39,25 +54,25 @@ describe('List Data Structure', () => {
     let result = stuff.shift();
     expect(stuff.length).toEqual(2);
     expect(stuff.data[1]).toEqual('c');
+    expect(stuff.data[2]).toBeUndefined();
     expect(result).toEqual('a');
     stuff.shift();
     expect(stuff.length).toEqual(1);
   });
 
-  // length should be plus 2 if two param
-  // element from position 1 is now at 3
-  // added params should be returned
-
-  it('adds parameters to teh beginning positions of an array', () => {
+  it('adds parameters to the beginning positions of an array', () => {
     let stuff = new List();
     stuff.push('a');
     stuff.push('b');
     stuff.push('c');
-    let result = stuff.unshift(y, z);
+    let result = stuff.unshift('y', 'z');
     expect(stuff.length).toEqual(5);
     expect(stuff.data[2]).toEqual('a');
-    expect(result).toEqual('y', 'z');
-    stuff.unshift(m);
+    expect(result).toEqual(5);
+    stuff.unshift('m');
     expect(stuff.length).toEqual(6);
   });
+
 });
+
+
