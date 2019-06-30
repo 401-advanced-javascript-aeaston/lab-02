@@ -1,6 +1,6 @@
-# LAB 
+# LAB-02
 
-## Project Name - Lab-02
+## LAB: Classes, Inheritance, Functional Programming
 
 ### Author: Adrienne, with some mob programming with class for setup
 
@@ -12,27 +12,32 @@
 #### `list.js`
 ##### Exported Values and Methods
 
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
+List
+  - pop
+  - push
+  - forEach
+  - shift
+  - unshift
 
 #### `vehicle-class.js`
 ##### Exported Values and Methods
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+Vehicle
+ - drive
+ - stop
 
-###### `bar(array) -> array`
-Usage Notes or examples
+Car (extends Vehicle)
+
+Motorcycle (extends Vehicle)
+ - wheelie
 
 ### Setup
+* To install necessary dependancies type 'npm i'
   
 #### Tests
-* How do you run tests? Type 'npm test'.
-* What assertions were made?
-* What assertions need to be / should be made?
+* To run test type 'npm test'.
+
+
 
 
 
