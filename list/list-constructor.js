@@ -58,4 +58,16 @@ List.prototype.unshift = function(...arr) {
   return this.length;
 };
 
+List.prototype.map = function(callback) {
+
+}
+
+List.prototype.filter = function(callback, thisArg) {
+
+}
+
+List.prototype.reduce = function(callback, initialValue) {
+
+}
+
 module.exports = List;

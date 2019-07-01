@@ -31,7 +31,7 @@ describe('List Data Structure', () => {
     expect(stuff.length).toEqual(1);
   });
  
-  it ('takes in a callback function and runs that function over each element in the array', () => {
+  it ('takes in a callback function and interates that function over each element in the array', () => {
     let stuff = new List();
     stuff.push(1);
     stuff.push(2);
@@ -71,6 +71,36 @@ describe('List Data Structure', () => {
     expect(result).toEqual(5);
     stuff.unshift('m');
     expect(stuff.length).toEqual(6);
+  });
+
+  it('takes a function and iterates that function over each element of an array creating a new array', () => {
+    let stuff = new List();
+    stuff.push(1);
+    stuff.push(2);
+    stuff.push(3);
+    let newList = stuff.map(element => {
+      return element * 10;
+    });
+    expect(newList).toBeInstanceOf(List);
+    expect(newList.length).toEqual(3);
+    expect(newList[0]).toEqual(10);
+    expect(newList[1]).toEqual(20);
+    expect(newList[2]).toEqual(30);
+  });
+  //
+
+  it('returns a new array with elements filtered from the original array based on the provided function/parameter', () => {
+    let stuff = new List();
+    stuff.push('a');
+    stuff.push('b');
+    stuff.push('c');
+  });
+
+  it('returns a single output value based on the application of a reducer function each element in the array ', () => {
+    let stuff = new List();
+    stuff.push('a');
+    stuff.push('b');
+    stuff.push('c');
   });
 
 });

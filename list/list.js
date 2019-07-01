@@ -56,6 +56,22 @@ class List {
     return this.length;
   }
 
+  map(callback) {
+    let result = new List();
+    for (let i = 0; i < this.length; i++) {
+      result.push(callback(this.data[i])); 
+    }
+    return result;
+  }
+  
+  filter(callback, thisArg) {
+  
+  }
+  
+  reduce(callback, initialValue) {
+
+  }
+
 }
 
 module.exports = List;
