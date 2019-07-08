@@ -18,6 +18,9 @@ List
   - forEach
   - shift
   - unshift
+  - map
+  - filter
+  - reduce
 
 #### `vehicle-class.js`
 ##### Exported Values and Methods

@@ -58,8 +58,8 @@ class List {
 
   map(callback) {
     let result = new List();
-    for (let i = 0; i < this.length - 1; i++) {
-      result.push(callback(this.data[i], i)); 
+    for(let i = 0; i < this.length; i++) {
+      result.push(callback(this.data[i])); 
     }
     return result;
   }

@@ -83,9 +83,9 @@ describe('List Data Structure', () => {
     });
     expect(newList).toBeInstanceOf(List);
     expect(newList.length).toEqual(3);
-    expect(newList[0]).toEqual(10);
-    expect(newList[1]).toEqual(20);
-    expect(newList[2]).toEqual(30);
+    expect(newList.data[0]).toEqual(10);
+    expect(newList.data[1]).toEqual(20);
+    expect(newList.data[2]).toEqual(30);
   });
   //
 
