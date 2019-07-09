@@ -60,14 +60,14 @@ List.prototype.unshift = function(...arr) {
 
 List.prototype.map = function(callback) {
 
-}
+};
 
 List.prototype.filter = function(callback, thisArg) {
 
-}
+};
 
 List.prototype.reduce = function(callback, initialValue) {
 
-}
+};
 
 module.exports = List;
